@@ -1,0 +1,51 @@
+<html>
+	<body>
+		<link ref = "stylesheet" href = "/dating.css">
+		<h1>
+			Welcome to iDate
+		</h1>
+		<h2>
+			 Register yourself to start getting a match!!!
+		</h2>
+		<h3>
+			There are <%=count%> users already registered.
+		</h3>
+		<form method = "POST" action = "/register">
+			<label for = "first_name"><strong>First Name</strong></label>
+			<input type = "text" name = "first_name" id = "first_name" placeholder = "First Name" required>
+			<br>
+			<label for = "last_name"><strong>Last Name</strong></label>
+			<input type = "text" name = "last_name" id = "last_name" placeholder = "Last Name" required>
+			<br>
+			<label for= "age"><strong>Age</strong></label>
+			<input type = "text" name = "age" id = "age" required>
+			<br>
+			<br>
+			<label for = "gender"><strong>Gender</strong></label>
+			<br>
+			<input type="radio" id="male" name="gender" value="male">
+  			<label for="male">MALE</label><br>
+  			<input type="radio" id="female" name="gender" value="female">
+  			<label for="female">Female</label><br>
+  			<input type="radio" id="prefer_not_to_say" name="gender" value="prefer_not_to_say">
+  			<label for="prefer_not_to_say">Prefer Not to Say</label>
+			<br>
+			
+			<button>
+				 Create Profile
+			</button>
+		</form>
+		<br>
+		<form method = "POST" action = "/check">
+				<p>
+					Type in the user number you want to check in DB and click the button below
+				</p>
+			<br>
+			<label for = "user"><strong>User Number</strong></label>
+			<input type = "text" name = "user" id = "user">
+				<button>
+					Check database
+				</button>
+		</form>
+	</body>
+</html>
